@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 const navItems = [
@@ -128,19 +129,19 @@ export default function Home() {
     <>
       <nav id="navbar">
         <div className="nav-inner">
-          <a href="#hero" className="nav-logo">
+          <Link href="/#hero" className="nav-logo">
             LIT
-          </a>
+          </Link>
 
           <div className="nav-links">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.id}
-                href={`#${item.id}`}
+                href={`/#${item.id}`}
                 className={activeSection === item.id ? "active" : ""}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <button
               className="theme-btn"
@@ -202,14 +203,14 @@ export default function Home() {
           id="mobileMenu"
         >
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.id}
-              href={`#${item.id}`}
+              href={`/#${item.id}`}
               className={activeSection === item.id ? "active" : ""}
               onClick={() => setMobileOpen(false)}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>
@@ -238,7 +239,7 @@ export default function Home() {
               </div>
 
               <div className="hero-cta fade-up delay-4">
-                <a href="#projects" className="btn-primary">
+                <Link href="/#projects" className="btn-primary">
                   <svg
                     width="16"
                     height="16"
@@ -255,7 +256,7 @@ export default function Home() {
                     <rect x="3" y="14" width="7" height="7" />
                   </svg>
                   View Projects
-                </a>
+                </Link>
                 <a
                   href="/Lei_Ieong_Tam_resume.pdf"
                   download

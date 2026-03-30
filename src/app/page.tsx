@@ -258,8 +258,9 @@ export default function Home() {
                   View Projects
                 </Link>
                 <a
-                  href="/Lei_Ieong_Tam_resume.pdf"
-                  download
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-outline"
                 >
                   <svg
